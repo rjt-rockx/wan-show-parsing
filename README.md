@@ -6,8 +6,15 @@ Sure, here's a template for setting up a project with Python and Poetry:
 
 ## Prerequisites
 
-- Python 3.6 or higher
+- Python 3.8 or higher
 - Poetry
+
+## Environment Variables
+
+Make sure you have the following environment variables set:
+
+- `OPENAI_KEY` - OpenAI API Key
+- `OPENAI_ORG` - OpenAI Organization API Key
 
 ## Setup
 
