@@ -67,9 +67,9 @@ def handle_segment(
 w = Whisper.from_pretrained("base.en")
 p = w.params.with_language("en")
 p.with_language("en")
-p.with_no_speech_threshold(
+p.with_no_speech_thold(
     0.1
-)  # Originally named p.with_no_speech_thold(0.1). Idk if this is a mistake or not - Noelle
+)
 
 p.on_new_segment(handle_segment, None)
 
