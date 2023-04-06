@@ -47,7 +47,8 @@ with YoutubeDL(ydl_opts) as ydl:
 def handle_segment(
     context: whispercpp.api.Context, n_new: int, user_data: None
 ) -> None:
-    with open(file_name, "a") as file:
+    # Using write mode will automatically truncate the file, thus clearing it out
+    with open(file_name, "w") as file:
         segment = context.full_n_segments() - n_new
         while segment < context.full_n_segments():
             start_time = time.strftime(
